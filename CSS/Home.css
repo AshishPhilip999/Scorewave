@@ -1,0 +1,236 @@
+@font-face {
+  font-family: "Typo";
+  src: url(Typo.otf);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: Typo;
+}
+
+body {
+  background: rgb(255, 255, 255);
+}
+
+.navbar {
+  padding: 20px;
+  background: rgb(0, 0, 0);
+  border-bottom: solid rgb(0, 0, 0) 1px;
+}
+
+.create {
+  background-color: black;
+  padding: 8px;
+  color: white;
+  font-size: 12px;
+  border: solid red 2px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  animation: fade 4s;
+
+  animation-fill-mode: forwards;
+}
+
+.create:hover {
+  background: rgb(255, 0, 0);
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  border: solid rgb(255, 0, 0) 2px;
+
+  border-radius: 10px;
+}
+
+.create.contribute {
+  margin-left: 0px;
+}
+
+.create:hover .contribute {
+  margin-left: 0px;
+}
+
+.bg {
+  background: black;
+  text-align: center;
+  font-size: 80px;
+  padding-top: 200px;
+  padding-bottom: 340px;
+  color: white;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+.title {
+  opacity: 0%;
+
+  animation: fade 4s;
+
+  animation-fill-mode: forwards;
+
+  /* transition: color 1s; */
+}
+
+.subtext {
+  padding: 20px;
+
+  animation: fade 7s;
+  animation-fill-mode: forwards;
+}
+
+.sub {
+  font-size: 13px;
+
+  text-align: right;
+
+  float: left;
+  width: 55.7%;
+}
+
+.context {
+  border-radius: 2px;
+
+  border: solid rgb(0, 0, 0) 1px;
+  text-align: center;
+
+  background: rgb(255, 255, 255);
+
+  width: 40%;
+
+  margin: auto;
+
+  margin-top: 80px;
+  margin-bottom: 10px;
+
+  animation: fade 4s;
+
+  animation-fill-mode: forwards;
+}
+
+.context.about {
+  border: none;
+  margin-top: 20px;
+  font-size: 35px;
+  margin-bottom: 0px;
+  color: white;
+  background: black;
+}
+
+.context.descript {
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgb(255, 255, 255);
+  width: 92%;
+
+  border: none;
+
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.context.support {
+  margin-top: 150px;
+  margin-bottom: 50px;
+  width: 50%;
+}
+
+.context.contact {
+  margin-top: 20px;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+
+  font-size: 25px;
+  color: white;
+}
+
+.links {
+  padding-top: 10px;
+}
+
+.images {
+  padding: 20px 20px 0px 20px;
+}
+
+.image1 {
+  padding: 10px;
+
+  width: 27.3%;
+  float: left;
+}
+
+.image2 {
+  padding: 10px;
+
+  float: left;
+
+  width: 37.3%;
+}
+
+.image3 {
+  padding: 10px;
+}
+
+.buttons {
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+.buttons.redir1 {
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  width: 33.3%;
+}
+.buttons.redir1:hover {
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  width: 33.3%;
+}
+.buttons.redir2 {
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  width: 33.3%;
+}
+
+.buttons.redir3 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.insta {
+  float: left;
+  width: 33.33%;
+}
+
+.stereo {
+  padding: 10px;
+  background: white;
+  border: solid black 2px;
+  color: black;
+  cursor: pointer;
+}
+.stereo:hover {
+  padding: 10px;
+  background: black;
+  border: solid black 2px;
+  color: white;
+}
+
+.gmail {
+  float: left;
+  width: 33.33%;
+}
