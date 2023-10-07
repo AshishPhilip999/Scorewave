@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "Typo";
+  src: url(Typo.otf);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+
+  font-family: Typo;
+}
+
+.bg {
+  background: rgb(253, 253, 253);
+  padding: 20px 20px 250px 20px;
+
+  margin: auto;
+
+  margin-top: 2.3%;
+
+  width: 60%;
+
+  border: solid rgb(0, 0, 0) 1.5px;
+}
+
+.teamentriesbg {
+  background: rgb(247, 247, 247);
+}
+
+.matchdetails {
+  padding: 20px 0px 20px 0px;
+  margin-bottom: 20px;
+}
+
+.heading {
+  background-color: rgb(0, 0, 0);
+
+  padding: 5px 5px 5px 5px;
+
+  color: white;
+}
+
+.heading.matchdet {
+  margin: auto;
+
+  margin-left: 0px;
+}
+
+.slct {
+  margin-left: 10px;
+  padding: 5px 5px 5px 8px;
+}
+
+.opt {
+  padding: 10px;
+
+  font-family: Typo;
+}
+
+.content {
+  padding: 10px 20px 20px 50px;
+
+  border: solid black 2px;
+}
+
+.inputname.overs {
+  width: 4%;
+  text-align: center;
+  padding: 5px 5px 5px 5px;
+
+  font-size: 15px;
+
+  margin-left: 25px;
+}
+
+.inputname.wickets {
+  width: 4%;
+  padding: 5px;
+
+  text-align: center;
+}
+
+.checks {
+  border: solid black 2px;
+  padding: 5px;
+}
+.fill {
+  padding: 20px;
+  background-color: rgb(234, 234, 234);
+  margin: auto;
+
+  border: solid black 1px;
+  border-top: none;
+  width: 90%;
+}
+
+.name {
+  align-items: center;
+}
+
+.inputname {
+  margin-left: 10px;
+  width: 85%;
+
+  padding: 2px;
+
+  border: solid black 2px;
+
+  margin-top: 10px;
+
+  text-align: center;
+}
