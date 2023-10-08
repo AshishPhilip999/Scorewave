@@ -23,9 +23,9 @@
     <div class="subtext">
 
       <div class="sub">
-        <pre>M A K E   Y O U R   M A T C H   A</pre>
+        <pre>M A K E   Y O U R   G A M E   A</pre>
       </div>
-      <div style="font-size: 13.2px; text-align:left; width:42%; float:left; padding-left:4.2px; color:red">
+      <div style="font-size: 13.4px; text-align:left; width:42%; float:left; padding-left:4.2px; color:red">
         L I V E
       </div>
 
@@ -33,7 +33,7 @@
 
     <div class="btncreate">
       <button class="create">
-        <pre> C R E A T E   M Y   M A T C H </pre>
+        <pre> C R E A T E   M Y   G A M E </pre>
       </button>
     </div>
   </div>

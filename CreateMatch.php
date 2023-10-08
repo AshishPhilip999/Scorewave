@@ -23,24 +23,22 @@
                     <div class="fill matchdet">
                         <div class="format">
                             <label for="">FORMAT</label>
-                            <select name="" id="" class="slct">
+                            <select name="" id="format" class="slct">
                                 <option value="" class="opt">TEST</option>
                                 <option value="" class="opt">ODI</option>
                                 <option value="" class="opt">T20</option>
                             </select>
                         </div>
                         <div class="customcheck" style="margin-top: 20px ;">
-                            <input type="checkbox">
+                            <input type="checkbox" id="customcheck">
                             <label for="" style="font-size: 13px ;">CUSTOM FORMAT</label>
                         </div>
 
-                        <div
-                            style="background: black ; margin-top: 10px; text-align: center; color: white; border: solid black 3px;">
+                        <div id="customfill"
+                            style=" display: none ;background: black ; margin-top: 10px; text-align: center; color: white; border: solid black 3px;">
                             <label for="">CUSTOM FILL</label>
                         </div>
-                        <div class="content">
-
-
+                        <div class="content" id="customfillcontent" style="display: none ;">
                             <div style="border: solid black 2px ; padding: 10px ;">
                                 <div class="overs">
                                     <label for="">OVERS</label>
@@ -65,6 +63,9 @@
                                 <label for="">ALLOW LAST PLAYER BATTING</label>
                             </div>
                         </div>
+
+
+
                     </div>
                 </div>
 
@@ -87,7 +88,47 @@
     </div>
 
 
-    <script></script>
+    <script>
+
+        const formatselection = document.getElementById("format");
+
+
+        const custombox = document.getElementById("customcheck");
+        const customfill = document.getElementById("customfill");
+        const customfillcontent = document.getElementById("customfillcontent");
+
+        custombox.addEventListener("change", function () {
+
+            if (custombox.checked) {
+
+                disableInput(formatselection);
+
+                customfill.style.display = "block";
+                customfillcontent.style.display = "block";
+            } else {
+
+                enableInput(formatselection);
+
+                customfill.style.display = "none";
+                customfillcontent.style.display = "none";
+            }
+
+        });
+
+        function disableInput(element) {
+
+            element.style.pointerEvents = "none";
+            element.style.opacity = "0.4";
+        }
+        function enableInput(element) {
+
+            element.style.pointerEvents = "all";
+            element.style.opacity = "1";
+        }
+
+
+
+    </script>
 </body>
 
 </html>

@@ -17,6 +17,7 @@
   margin: auto;
 
   margin-top: 2.3%;
+  margin-bottom: 2%;
 
   width: 60%;
 
@@ -86,7 +87,7 @@
 }
 .fill {
   padding: 20px;
-  background-color: rgb(234, 234, 234);
+  background-color: rgb(255, 255, 255);
   margin: auto;
 
   border: solid black 1px;
