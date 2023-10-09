@@ -48,7 +48,7 @@
 
                                 <div class="wickets">
                                     <label for="">WICKETS</label>
-                                    <input type="text" class="inputname wickets">
+                                    <input type="text" id="wickets" class="inputname wickets">
                                 </div>
                             </div>
 
@@ -80,6 +80,30 @@
                         <input type="text" class="inputname">
                     </div>
 
+                    <div class="teamsize">
+                        <label for="" class="labelname">TEAM SIZE</label>
+                        <input type="number" inputmode="numeric" class="inputname tsize" id="teamonesize"
+                            style="margin-left: 20px ; width: 3% ; margin-top: 20px ; padding-left: 8px; text-align: center; ; width:6%  ;">
+                        <button class="sizebutton" id="teamoneaddsize"> ADD </button>
+                    </div>
+
+                    <div class="team">
+                        <ul class="teamlist" id="teamlist">
+                            <!-- <li>
+                                <div>
+                                    <div class="playerlabel">
+                                        <label for="" class="playernumber">PLAYER 1000</label>
+                                    </div>
+
+                                    <div class="playerinput">
+                                        <input type="text" class="inputname player">
+                                    </div>
+                                </div>
+                            </li> -->
+
+                        </ul>
+                    </div>
+
                 </div>
 
             </form>
@@ -88,44 +112,7 @@
     </div>
 
 
-    <script>
-
-        const formatselection = document.getElementById("format");
-
-
-        const custombox = document.getElementById("customcheck");
-        const customfill = document.getElementById("customfill");
-        const customfillcontent = document.getElementById("customfillcontent");
-
-        custombox.addEventListener("change", function () {
-
-            if (custombox.checked) {
-
-                disableInput(formatselection);
-
-                customfill.style.display = "block";
-                customfillcontent.style.display = "block";
-            } else {
-
-                enableInput(formatselection);
-
-                customfill.style.display = "none";
-                customfillcontent.style.display = "none";
-            }
-
-        });
-
-        function disableInput(element) {
-
-            element.style.pointerEvents = "none";
-            element.style.opacity = "0.4";
-        }
-        function enableInput(element) {
-
-            element.style.pointerEvents = "all";
-            element.style.opacity = "1";
-        }
-
+    <script src="JS/CreateMatch.js">
 
 
     </script>

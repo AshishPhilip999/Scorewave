@@ -25,7 +25,7 @@
 }
 
 .teamentriesbg {
-  background: rgb(247, 247, 247);
+  background: white;
 }
 
 .matchdetails {
@@ -87,7 +87,7 @@
 }
 .fill {
   padding: 20px;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   margin: auto;
 
   border: solid black 1px;
@@ -116,4 +116,66 @@
   outline: none;
 
   border: solid rgb(0, 47, 255) 2px;
+}
+
+.sizebutton {
+  padding: 6px;
+
+  border: solid black 1px;
+
+  background: white;
+
+  cursor: pointer;
+}
+
+.sizebutton:hover {
+  padding: 6px;
+
+  border: solid black 1px;
+
+  background: rgb(0, 0, 0);
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.team {
+  margin-top: 10px;
+
+  padding: 20px;
+}
+
+.teamlist {
+  list-style-type: none;
+}
+
+.playerlabel {
+  padding: 15px;
+  padding-left: 10px;
+  padding-right: 1px;
+
+  float: left;
+
+  text-align: left;
+
+  width: 14%;
+}
+
+.playernumber {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.playerinput {
+  padding: 10px;
+}
+
+.inputname.player {
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  padding: 5px 5px 5px 10px;
+
+  width: 80%;
 }

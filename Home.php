@@ -32,7 +32,7 @@
     </div>
 
     <div class="btncreate">
-      <button class="create">
+      <button class="create" action="CreateMatch.php" id="creatematch">
         <pre> C R E A T E   M Y   G A M E </pre>
       </button>
     </div>
@@ -96,6 +96,17 @@
 
   </div>
 
+  <script>
+
+    const createButton = document.getElementById("creatematch");
+
+    createButton.addEventListener("click", function () {
+      window.open("CreateMatch.php", "_blank");
+    });
+
+  </script>
+
 </body>
+
 
 </html>
