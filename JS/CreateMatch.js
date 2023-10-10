@@ -51,17 +51,7 @@ teamoneaddsize.addEventListener("click", function (e) {
 let listA = [];
 let listB = [];
 
-function fetchList(list) {
-  let i = 1;
-  console.log(list.length);
-  while (i <= list.length) {
-    const input = document.getElementById("playerA" + i);
-
-    list[i - 1] = input.value;
-
-    i++;
-  }
-}
+// functions ---------------------------------------------------------------------------------------------------------------------------
 
 function renderList(list, listid, playerid, size) {
   if (list.length != 0) {
@@ -161,6 +151,18 @@ function addRemoveEvent(button, index, list, listid, playerid) {
       teamlist.appendChild(item);
     }
   });
+}
+
+function fetchList(list) {
+  let i = 1;
+  console.log(list.length);
+  while (i <= list.length) {
+    const input = document.getElementById("playerA" + i);
+
+    list[i - 1] = input.value;
+
+    i++;
+  }
 }
 
 function disableInput(element) {
