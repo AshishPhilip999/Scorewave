@@ -92,11 +92,16 @@
                             <!-- <li>
                                 <div>
                                     <div class="playerlabel">
-                                        <label for="" class="playernumber">PLAYER 1000</label>
+                                        <label for="" class="playernumber">PLAYER 1</label>
                                     </div>
 
                                     <div class="playerinput">
                                         <input type="text" class="inputname player">
+                                    </div>
+
+                                    <div class="removeplayer">
+                                        <button class="sizebutton remove">-</button>
+
                                     </div>
                                 </div>
                             </li> -->

@@ -169,6 +169,8 @@
 
 .playerinput {
   padding: 10px;
+  width: 78%;
+  float: left;
 }
 
 .inputname.player {
@@ -177,5 +179,14 @@
 
   padding: 5px 5px 5px 10px;
 
-  width: 80%;
+  width: 96%;
+}
+
+.removeplayer {
+  padding: 10px;
+}
+
+.sizebutton:hover.remove {
+  background: red;
+  border: solid red 1px;
 }

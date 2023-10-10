@@ -105,9 +105,11 @@ function createContent(list, listid, playerid, i) {
 
   const label = document.createElement("label");
   const input = document.createElement("input");
+  const removebtn = document.createElement("button");
 
   const labeldivision = document.createElement("div");
   const inputdivision = document.createElement("div");
+  const removebtndivision = document.createElement("div");
 
   label.classList.add("playernumber");
   label.id = listid + i;
@@ -117,18 +119,48 @@ function createContent(list, listid, playerid, i) {
   input.id = playerid + i;
   input.value = list[i - 1];
 
+  removebtn.classList.add("sizebutton", "remove");
+  removebtn.id = i - 1;
+  removebtn.textContent = "-";
+
+  addRemoveEvent(removebtn, i - 1, list, listid, playerid);
+
   labeldivision.classList.add("playerlabel");
   inputdivision.classList.add("playerinput");
+  removebtndivision.classList.add("removeplayer");
 
   labeldivision.appendChild(label);
   inputdivision.appendChild(input);
+  removebtndivision.appendChild(removebtn);
 
   division.appendChild(labeldivision);
   division.appendChild(inputdivision);
+  division.appendChild(removebtndivision);
 
   item.appendChild(division);
 
   return item;
+}
+
+function addRemoveEvent(button, index, list, listid, playerid) {
+  index = parseInt(index);
+  button.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    fetchList(list);
+
+    list.splice(index, 1);
+
+    while (teamlist.firstChild) {
+      teamlist.removeChild(teamlist.firstChild);
+    }
+
+    for (let i = 1; i <= list.length; i++) {
+      const item = createContent(list, listid, playerid, i);
+      console.log("enter");
+      teamlist.appendChild(item);
+    }
+  });
 }
 
 function disableInput(element) {
