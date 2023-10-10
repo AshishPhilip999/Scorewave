@@ -57,9 +57,6 @@ function renderList(list, listid, playerid, size) {
   if (list.length != 0) {
     fetchList(list);
   }
-  while (teamlist.firstChild) {
-    teamlist.removeChild(teamlist.firstChild);
-  }
 
   const lastindex = list.length - 1;
 
@@ -78,6 +75,16 @@ function renderList(list, listid, playerid, size) {
   }
 
   console.log(list.length);
+
+  refreshList(list, listid, playerid);
+
+  console.log(list);
+}
+
+function refreshList(list, listid, playerid) {
+  while (teamlist.firstChild) {
+    teamlist.removeChild(teamlist.firstChild);
+  }
 
   for (let i = 1; i <= list.length; i++) {
     const item = createContent(list, listid, playerid, i);
@@ -141,15 +148,7 @@ function addRemoveEvent(button, index, list, listid, playerid) {
 
     list.splice(index, 1);
 
-    while (teamlist.firstChild) {
-      teamlist.removeChild(teamlist.firstChild);
-    }
-
-    for (let i = 1; i <= list.length; i++) {
-      const item = createContent(list, listid, playerid, i);
-      console.log("enter");
-      teamlist.appendChild(item);
-    }
+    refreshList(list, listid, playerid);
   });
 }
 
