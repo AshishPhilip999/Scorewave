@@ -88,7 +88,7 @@
                     </div>
 
                     <div class="team">
-                        <ul class="teamlist" id="teamlist">
+                        <ul class="teamlist" id="teamalist">
                             <!-- <li>
                                 <div>
                                     <div class="playerlabel">
@@ -111,10 +111,64 @@
 
                 </div>
 
+                <!-- Team two form -->
+                <div class="heading teamtwo">
+                    <label for="">TEAM TWO </label>
+                </div>
+
+                <div class="fill teamtwo">
+
+                    <div class="name">
+                        <label for="" class="labelname">TEAM NAME</label>
+                        <input type="text" class="inputname">
+                    </div>
+
+                    <div class="teamsize">
+                        <label for="" class="labelname">TEAM SIZE</label>
+                        <input type="number" inputmode="numeric" class="inputname tsize" id="teamtwosize"
+                            style="margin-left: 20px ; width: 3% ; margin-top: 20px ; padding-left: 8px; text-align: center; ; width:6%  ;">
+                        <button class="sizebutton" id="teamtwoaddsize"> ADD </button>
+                    </div>
+
+                    <div class="team">
+                        <ul class="teamlist" id="teamblist">
+                            <!-- <li>
+                                <div>
+                                    <div class="playerlabel">
+                                        <label for="" class="playernumber">PLAYER 1</label>
+                                    </div>
+
+                                    <div class="playerinput">
+                                        <input type="text" class="inputname player">
+                                    </div>
+
+                                    <div class="removeplayer">
+                                        <button class="sizebutton remove">-</button>
+
+                                    </div>
+                                </div>
+                            </li> -->
+
+                        </ul>
+                    </div>
+
+                </div>
+
+
             </form>
 
         </div>
+
+        <div class="livebg">
+            <div class="btncontainer">
+                <button class="livebtn">
+                    <pre>G O   L I V E</pre>
+                </button>
+            </div>
+        </div>
     </div>
+
+
 
 
     <script src="JS/CreateMatch.js">

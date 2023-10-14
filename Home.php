@@ -25,7 +25,8 @@
       <div class="sub">
         <pre>M A K E   Y O U R   G A M E   A</pre>
       </div>
-      <div style="font-size: 13.4px; text-align:left; width:42%; float:left; padding-left:4.2px; color:red">
+      <div
+        style="font-size: 14px; ; text-align:left; width:42%; float:left;  ; padding-left:4.7px; color:red; margin-top: -0.6px; ;">
         L I V E
       </div>
 

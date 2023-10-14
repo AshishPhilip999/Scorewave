@@ -7,9 +7,13 @@ const customfill = document.getElementById("customfill");
 const customfillcontent = document.getElementById("customfillcontent");
 
 const teamonesize = document.getElementById("teamonesize");
-const teamoneaddsize = document.getElementById("teamoneaddsize");
+const teamtwosize = document.getElementById("teamtwosize");
 
-const teamlist = document.getElementById("teamlist");
+const teamoneaddsize = document.getElementById("teamoneaddsize");
+const teamtwoaddsize = document.getElementById("teamtwoaddsize");
+
+const teamAlist = document.getElementById("teamalist");
+const teamBlist = document.getElementById("teamblist");
 
 // custom button toggle.
 custombox.addEventListener("change", function () {
@@ -30,6 +34,11 @@ custombox.addEventListener("change", function () {
 teamonesize.addEventListener("input", function () {
   this.value = this.value.replace(/[^0-9]/g, "");
 });
+
+teamtwoaddsize.addEventListener("input", function () {
+  this.value = this.value.replace(/[^0-9]/g, "");
+});
+
 wickets.addEventListener("input", function () {
   this.value = this.value.replace(/[^0-9]/g, "");
 });
@@ -45,17 +54,31 @@ teamoneaddsize.addEventListener("click", function (e) {
     return;
   }
 
-  renderList(listA, "labelA", "playerA", size);
+  renderList(listA, teamAlist, "labelA", "playerA", size);
 });
 
 let listA = [];
 let listB = [];
 
+//adding teamtwo players
+
+teamtwoaddsize.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  let size = parseInt(teamtwosize.value);
+
+  if (size > 100) {
+    return;
+  }
+
+  renderList(listB, teamBlist, "labelB", "playerB", size);
+});
+
 // functions ---------------------------------------------------------------------------------------------------------------------------
 
-function renderList(list, listid, playerid, size) {
+function renderList(list, teamlist, listid, playerid, size) {
   if (list.length != 0) {
-    fetchList(list);
+    fetchList(list, playerid);
   }
 
   const lastindex = list.length - 1;
@@ -76,18 +99,18 @@ function renderList(list, listid, playerid, size) {
 
   console.log(list.length);
 
-  refreshList(list, listid, playerid);
+  refreshList(list, teamlist, listid, playerid);
 
   console.log(list);
 }
 
-function refreshList(list, listid, playerid) {
+function refreshList(list, teamlist, listid, playerid) {
   while (teamlist.firstChild) {
     teamlist.removeChild(teamlist.firstChild);
   }
 
   for (let i = 1; i <= list.length; i++) {
-    const item = createContent(list, listid, playerid, i);
+    const item = createContent(list, teamlist, listid, playerid, i);
     console.log("enter");
     teamlist.appendChild(item);
   }
@@ -95,7 +118,7 @@ function refreshList(list, listid, playerid) {
   console.log(list);
 }
 
-function createContent(list, listid, playerid, i) {
+function createContent(list, teamlist, listid, playerid, i) {
   console.log(list);
   const item = document.createElement("li");
   const division = document.createElement("div");
@@ -120,7 +143,7 @@ function createContent(list, listid, playerid, i) {
   removebtn.id = i - 1;
   removebtn.textContent = "-";
 
-  addRemoveEvent(removebtn, i - 1, list, listid, playerid);
+  addRemoveEvent(removebtn, i - 1, list, teamlist, listid, playerid);
 
   labeldivision.classList.add("playerlabel");
   inputdivision.classList.add("playerinput");
@@ -139,24 +162,24 @@ function createContent(list, listid, playerid, i) {
   return item;
 }
 
-function addRemoveEvent(button, index, list, listid, playerid) {
+function addRemoveEvent(button, index, list, teamlist, listid, playerid) {
   index = parseInt(index);
   button.addEventListener("click", function (e) {
     e.preventDefault();
 
-    fetchList(list);
+    fetchList(list, playerid);
 
     list.splice(index, 1);
 
-    refreshList(list, listid, playerid);
+    refreshList(list, teamlist, listid, playerid);
   });
 }
 
-function fetchList(list) {
+function fetchList(list, id) {
   let i = 1;
   console.log(list.length);
   while (i <= list.length) {
-    const input = document.getElementById("playerA" + i);
+    const input = document.getElementById(id + i);
 
     list[i - 1] = input.value;
 

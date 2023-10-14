@@ -10,14 +10,18 @@
   font-family: Typo;
 }
 
+body {
+  background-image: linear-gradient(to bottom, black, rgb(66, 66, 66));
+}
+
 .bg {
   background: rgb(253, 253, 253);
-  padding: 20px 20px 250px 20px;
+  padding: 20px 20px 50px 20px;
 
   margin: auto;
 
   margin-top: 2.3%;
-  margin-bottom: 2%;
+  margin-bottom: 2.3%;
 
   width: 60%;
 
@@ -115,7 +119,7 @@
 .inputname:focus {
   outline: none;
 
-  border: solid rgb(0, 47, 255) 2px;
+  border: solid blue 2px;
 }
 
 .sizebutton {
@@ -189,4 +193,49 @@
 .sizebutton:hover.remove {
   background: red;
   border: solid red 1px;
+}
+
+.heading.teamtwo {
+  margin-top: 40px;
+}
+
+.livebg {
+  padding: 1px;
+  margin: auto;
+
+  width: 94.7%;
+
+  margin-top: 8px;
+
+  align-items: center;
+}
+
+.livebtn {
+  border: solid red 2px;
+
+  background: rgb(255, 255, 255);
+
+  padding: 10px;
+
+  color: rgb(0, 0, 0);
+
+  margin: auto;
+
+  width: 100%;
+}
+
+.livebtn:hover {
+  border: solid red 2px;
+
+  cursor: pointer;
+
+  background: red;
+
+  padding: 10px;
+
+  color: rgb(0, 0, 0);
+
+  margin: auto;
+
+  width: 100%;
 }
